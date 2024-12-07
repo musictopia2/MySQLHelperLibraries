@@ -19,7 +19,7 @@ public class CustomMySQLConnectionClass : IMySQLConnector
         {
             throw new CustomBasicException("Only MySQL is supported for this category.  Rethink");
         }
-        return new MySqlConnection(connectionString);
+        return new MySqlConnection(connectionString); //forced to use a package that has known problems.  hopefully they fix them.
     }
     DbParameter IDbConnector.GetParameter()
     {
